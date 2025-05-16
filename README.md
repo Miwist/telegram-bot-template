@@ -9,6 +9,6 @@
 Создайте нового Telegram бота за 30 секунд:
 
 ```bash
-npx grammy-bot-starter my-bot
+npx create-grammy-bot my-bot
 cd my-bot
 npm start
