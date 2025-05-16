@@ -1,6 +1,6 @@
 {
   "name": "grammy-bot-starter",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Шаблон Telegram бота на TypeScript с grammY",
   "bin": {
     "create-grammy-bot": "bin/setup.mjs"
