@@ -11,10 +11,10 @@ export const capitalize = (word: string) => {
 
 // Запрещенные слова
 export const isCensorText = (text: string) => {
-  const lowerCaseText = text.toLowerCase(); // Приводим текст к нижнему регистру для нечувствительности к регистру
+  const lowerCaseText = text.toLowerCase();
 
   for (const item of wordsCancored) {
-    const lowerCaseBadWord = item.word.toLowerCase(); // Приводим запрещенное слово к нижнему регистру
+    const lowerCaseBadWord = item.word.toLowerCase();
     if (lowerCaseText.includes(lowerCaseBadWord)) {
       return true; // Если запрещенное слово найдено (фрагментарно), возвращаем true
     }
