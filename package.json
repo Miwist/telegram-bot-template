@@ -1,34 +1,39 @@
 {
-  "name": "youhelpme",
+  "name": "grammy-bot-template",
   "version": "1.0.0",
-  "description": "Телеграм бот приложение 'услуга за услугу'",
-  "main": "index.js",
-  "scripts": {
-    "start": "nodemon --exec ts-node src/index.ts",
-    "build": "tsc",
-    "serve": "node dist/index.js",
-    "typeorm": "ts-node ./node_modules/typeorm/cli",
-    "migration:generate": "npm run typeorm -- migration:generate ./src/database/migrations/$npm_config_name -d ./src/database/data-source.ts",
-    "migration:run": "npm run typeorm -- migration:run -d ./src/database/data-source.ts",
-    "migration:revert": "npm run typeorm -- migration:revert -d ./src/database/data-source.ts",
-    "migration:create": "npm run typeorm -- migration:create ./src/database/migrations/$npm_config_name",
-    "migration:status": "npm run typeorm -- migration:show -d ./src/database/data-source.ts"
+  "description": "TypeScript template for Telegram bots using grammY",
+  "bin": {
+    "create-grammy-bot": "template/bin/setup.js"
   },
-  "keywords": [],
-  "author": "miwist",
-  "license": "ISC",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
   "dependencies": {
-    "date-fns": "^4.1.0",
-    "dotenv": "^16.5.0",
-    "grammy": "^1.36.1",
-    "nodemon": "^3.1.10",
-    "pg": "^8.15.6",
-    "reflect-metadata": "^0.2.2",
-    "typescript": "^5.8.3"
+    "chalk": "^5.2.0"
   },
   "devDependencies": {
-    "@types/node": "^22.15.3",
-    "ts-node": "^10.9.2",
-    "typeorm": "^0.3.22"
+    "@types/node": "^18.0.0",
+    "typescript": "^4.9.5"
+  },
+  "files": [
+    "bin",
+    "template",
+    "LICENSE"
+  ],
+  "keywords": [
+    "telegram",
+    "bot",
+    "grammy",
+    "typescript",
+    "template",
+    "starter"
+  ],
+  "author": "Miwist",
+  "license": "MIT",
+  "homepage": "https://github.com/Miwist/telegram-bot-template",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Miwist/telegram-bot-template.git"
   }
 }
