@@ -36,7 +36,7 @@ async function main() {
   try {
     await fs.mkdir(projectPath);
   } catch (err) {
-    if ((err as NodeJS.ErrnoException).code === 'EEXIST') {
+    if (err.code === 'EEXIST') {
       console.error(chalk.red(`❌ Ошибка: папка "${projectName}" уже существует!`));
       console.log(chalk.gray('\nПопробуйте другое имя проекта:'));
       console.log(`  npx grammy-bot-template ${chalk.yellow('<другое-имя>')}`);
